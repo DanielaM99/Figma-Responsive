@@ -1,7 +1,7 @@
-/* CSS */
-
+/* Imports a font from Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
 
+/* Defines a custom font 'LuffyFont' and specifies its source files */
 @font-face {
     font-family: 'LuffyFont';
     src: url(./fonts/CyberBrushRegular.woff2) format('woff2'),
@@ -10,12 +10,14 @@
     font-style: normal;
 }
 
+/* Universal reset: removes default margins and paddings, and sets box-sizing for all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Sets html and body to fill the viewport, centers content, and hides overflow */
 html, body {
     height: 100%;
     width: 100%;
@@ -26,6 +28,7 @@ html, body {
     overflow: hidden;
 }
 
+/* Styles the fixed background image that covers the entire page */
 .background{
     position: fixed;
     top: 0;
@@ -38,6 +41,7 @@ html, body {
     z-index: -2;
 }
 
+/* Adds a semi-transparent overlay to the background image */
 .background::before{
     content: '';
     position:absolute;
@@ -49,6 +53,7 @@ html, body {
     z-index: -1;
 }
 
+/* Styles the main card container, setting up a grid layout for its content */
 .card-container{
     display: grid;
     grid-template-columns: 410px 1fr;
@@ -69,6 +74,7 @@ html, body {
     z-index: 1;
 }
 
+/* Styles the 'Luffy' image, positioning it absolutely on the card */
 .luffy-image{
     position: absolute;
     top: 23.1%;
@@ -86,6 +92,7 @@ html, body {
     filter: drop-shadow(2px 2px 5px rgba(233, 230, 230, 0.9));
 }
 
+/* Styles the content area within the card, aligned to the end of the grid */
 .content-section{
     grid-column: 2;
     justify-self: end;
@@ -98,6 +105,7 @@ html, body {
     align-items: flex-end;
 }
 
+/* Styles for the menu icon (hamburger menu). */
 .menu{
     display: none;
     font-size: 2em;
@@ -109,7 +117,7 @@ html, body {
     z-index: 20;
 }
 
-
+/* Styles for the navigation bar list. */
 .navbar ul{
     display: flex;
     justify-content: flex-end;
@@ -119,6 +127,7 @@ html, body {
     padding: 0 15px;
 }
 
+/* Styles for navigation links. */
 .navbar a{
     text-decoration: none;
     color: #fff;
@@ -128,11 +137,12 @@ html, body {
 
 }
 
+/* Hover effect for navigation links. */
 .navbar a:hover {
     color: #2d47db;
 }
 
-
+/* Styles for the main text block. */
 .text {
     margin-top: auto;
     margin-bottom: 30%;
@@ -140,6 +150,7 @@ html, body {
     position: relative;
 }
 
+/* Styles for Japanese text. */
 .japanese-text {
     font-size: 1.8em;
     margin-bottom: 10px;
@@ -150,6 +161,7 @@ html, body {
 
 }
 
+/* Styles for the main heading (h1). */
 .text h1 {
     font-family: 'LuffyFont', 'Fira Mono', monospace, Arial, sans-serif;
     font-size: 4.6em;
@@ -164,6 +176,7 @@ html, body {
     filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.9));
 }
 
+/* Styles for the decorative line. */
 .line {
     width: 200px;
     height: 3px;
@@ -173,6 +186,7 @@ html, body {
     position: relative;
 }
 
+/* Pseudo-elements for glitch effect on h1 and Japanese text. */
 .text h1:before,
 .text h1:after,
 .japanese-text:before,
@@ -187,6 +201,7 @@ html, body {
     color: #fff;
 }
 
+/* Top part of the glitch effect. */
 .text h1:before,
 .japanese-text:before{
     animation: glitchTop 1s linear infinite;
@@ -194,6 +209,7 @@ html, body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
 }
 
+/* Bottom part of the glitch effect. */
 .text h1:after,
 .japanese-text:after{
     animation: glitchBotom 1.5s linear infinite;
@@ -201,6 +217,7 @@ html, body {
     -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
 
+/* Keyframes for the animation. */
 @keyframes glitchTop{
     2%,64%{
     transform: translate(2px,-2px);
@@ -237,6 +254,7 @@ html, body {
     }
 }
 
+/* Styles for a card container when it's a video card. */
 .card-container.video-card {
     padding: 20px;
     display: block;
@@ -257,6 +275,7 @@ html, body {
     z-index: 1;
 }
 
+/* Styles for the video section. */
 .video-section {
     flex: 1;
     display: flex;
@@ -266,12 +285,14 @@ html, body {
     font-size: 1em;
 }
 
+/* Navigation bar list specific to video cards. */
 .video-card .navbar ul {
     gap: 200px;
     justify-content: center;
     margin-bottom: 20px;
 }
 
+/* Styles for the gallery container. */
 .gallery {
     display: flex;
     justify-content: space-around;
@@ -281,6 +302,7 @@ html, body {
     position: relative;
 }
 
+/* Styles for individual video items in the gallery. */
 .video-item {
     display: flex;
     flex-direction: column;
@@ -295,11 +317,13 @@ html, body {
     flex-shrink: 0;
 }
 
+/* Hover effect for video items. */
 .video-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px #fff
 }
 
+/* Styles for images within video items. */
 .video-item img {
     width: 100%;
     height: auto;
@@ -308,6 +332,7 @@ html, body {
     display: block;
 }
 
+/* Styles for paragraph text within video items. */
 .video-item p {
     font-size: 1.3em;
     margin-bottom: 5px;
@@ -315,11 +340,13 @@ html, body {
     text-shadow: -3px -1px 1px #0000003a
 }
 
+/* Styles for small Japanese text within video items. */
 .video-item .japanese-text-small {
     font-size: 0.75em;
     opacity: 0.7;
 }
 
+/* Styles for the right arrow navigation. */
 .right-arrow {
     font-size: 2em;
     color: #000;
@@ -332,10 +359,12 @@ html, body {
     flex-shrink: 0;
 }
 
+/* Hover effect for the right arrow. */
 .right-arrow:hover {
     background-color: #fff
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 1023px){
     .card-container {
         grid-template-columns: 1fr; 
@@ -759,4 +788,3 @@ html, body {
         margin-bottom: 20px;
     }
 }
-
