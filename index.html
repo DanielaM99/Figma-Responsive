@@ -1,0 +1,43 @@
+<!-- HTML -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Monkey D. Luffy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Fondos/fondo.png">
+</head>
+<body>
+    <div class="background"></div>      
+        
+        <main class="card-container">
+            <div class="luffy-image"></div>   
+                <section class="content-section">
+                    <nav class="navbar">
+                        <div class="menu">&#9776;</div>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index2.html">Videos</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </nav>
+        
+                    <div class="text">
+                        <p class="japanese-text" data-text="モンキー・D.ルフィ">モンキー・D.ルフィ</p>
+                        <h1 data-text="MONKEY D. LUFFY">MONKEY D. LUFFY</h1>
+                        <div class="line"></div>
+                    </div>
+                </section>
+        </main>
+    <script>
+        const toggle = document.querySelector('.menu');
+        const navbar = document.querySelector('.navbar');     
+        toggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
