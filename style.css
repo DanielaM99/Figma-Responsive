@@ -73,7 +73,7 @@ html, body {
     position: absolute;
     top: 23.1%;
     left: -0.5%;
-    transform: translateY(-34.9%);
+    transform: translateY(-40%);
     background-image: url(./Fondos/l-removebg-preview.png);
     display: flex;
     width: 500px;
