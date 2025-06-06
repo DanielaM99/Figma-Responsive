@@ -640,7 +640,6 @@ html, body {
     }
 }
 
-
 @media (max-width: 480px) {
     .card-container {
         display: grid;
@@ -760,3 +759,4 @@ html, body {
         margin-bottom: 20px;
     }
 }
+
